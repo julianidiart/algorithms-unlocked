@@ -21,5 +21,6 @@ const authors = [
 const tests =
   linearSearch(authors, authors.length, "Isaac Asimov") === 0 &&
   linearSearch(authors, authors.length, "Terry Pratchett") === 4 &&
+  linearSearch(authors, authors.length, "Octavio Paz") === 7 &&
   linearSearch(authors, authors.length, "Jorge Luis Borges") === null;
 console.log("linearSearch: TESTS " + (tests ? "PASSED" : "FAILED"));

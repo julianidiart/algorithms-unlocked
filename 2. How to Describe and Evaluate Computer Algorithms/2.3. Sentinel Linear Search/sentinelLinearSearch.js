@@ -23,5 +23,6 @@ const authors = [
 const passed =
   sentinelLinearSearch(authors, authors.length, "Isaac Asimov") === 0 &&
   sentinelLinearSearch(authors, authors.length, "Terry Pratchett") === 4 &&
+  sentinelLinearSearch(authors, authors.length, "Octavio Paz") === 7 &&
   sentinelLinearSearch(authors, authors.length, "Jorge Luis Borges") === null;
 console.log("sentinelLinearSearch: TESTS " + (passed ? "PASSED" : "FAILED"));

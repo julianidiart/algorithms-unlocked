@@ -20,5 +20,6 @@ const authors = [
 const passed =
   betterLinearSearch(authors, authors.length, "Isaac Asimov") === 0 &&
   betterLinearSearch(authors, authors.length, "Terry Pratchett") === 4 &&
+  betterLinearSearch(authors, authors.length, "Octavio Paz") === 7 &&
   betterLinearSearch(authors, authors.length, "Jorge Luis Borges") === null;
 console.log("betterLinearSearch: TESTS " + (passed ? "PASSED" : "FAILED"));
