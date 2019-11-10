@@ -1,5 +1,5 @@
 // LINEAR-SEARCH
-const linearSearch = (A, n, x) => {
+const linearSearch = (A, x, n = authors.length) => {
   let answer = null;
   for (let i = 0; i < n; i++) {
     if (A[i] === x) answer = i;
@@ -19,8 +19,8 @@ const authors = [
   "Octavio Paz"
 ];
 const tests =
-  linearSearch(authors, authors.length, "Isaac Asimov") === 0 &&
-  linearSearch(authors, authors.length, "Terry Pratchett") === 4 &&
-  linearSearch(authors, authors.length, "Octavio Paz") === 7 &&
-  linearSearch(authors, authors.length, "Jorge Luis Borges") === null;
+  linearSearch(authors, "Isaac Asimov") === 0 &&
+  linearSearch(authors, "Terry Pratchett") === 4 &&
+  linearSearch(authors, "Octavio Paz") === 7 &&
+  linearSearch(authors, "Jorge Luis Borges") === null;
 console.log("linearSearch: TESTS " + (tests ? "PASSED" : "FAILED"));
