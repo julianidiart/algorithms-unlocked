@@ -20,7 +20,6 @@ const authors = [
   "George Orwell",
   "Pablo Neruda",
   "Aldous Huxley",
-  "Terry Pratchett",
   "Julio Cortázar"
 ];
 const sortedAuthors = [
@@ -30,8 +29,7 @@ const sortedAuthors = [
   "Isaac Asimov",
   "Julio Cortázar",
   "Octavio Paz",
-  "Pablo Neruda",
-  "Terry Pratchett"
+  "Pablo Neruda"
 ];
 const numbers = [9, 20, 1, 5, 7, 32, -4, 15];
 const sortedNumbers = [-4, 1, 5, 7, 9, 15, 20, 32];
