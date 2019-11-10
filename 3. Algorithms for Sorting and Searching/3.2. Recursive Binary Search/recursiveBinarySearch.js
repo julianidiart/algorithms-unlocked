@@ -18,8 +18,7 @@ const authors = [
   "Isaac Asimov",
   "Julio Cortázar",
   "Octavio Paz",
-  "Pablo Neruda",
-  "Terry Pratchett"
+  "Pablo Neruda"
 ];
 const tests =
   recursiveBinarySearch(authors, "Aldous Huxley") === 0 &&
