@@ -1,12 +1,12 @@
 // RECURSIVE-BINARY-SEARCH
-const recursiveBinarySearch = (A, r, x, p = 1) => {
+const recursiveBinarySearch = (A, x, p = 1, r = authors.length) => {
   if (p > r) return null;
   const q = Math.floor((p + r) / 2);
   if (A[q - 1] === x) return q - 1;
   if (A[q - 1] > x) {
-    return recursiveBinarySearch(A, q - 1, x, p);
+    return recursiveBinarySearch(A, x, p, q - 1);
   } else {
-    return recursiveBinarySearch(A, r, x, q + 1);
+    return recursiveBinarySearch(A, x, q + 1, r);
   }
 };
 
@@ -22,8 +22,8 @@ const authors = [
   "Terry Pratchett"
 ];
 const tests =
-  recursiveBinarySearch(authors, authors.length, "Aldous Huxley") === 0 &&
-  recursiveBinarySearch(authors, authors.length, "Isaac Asimov") === 3 &&
-  recursiveBinarySearch(authors, authors.length, "Terry Pratchett") === 7 &&
-  recursiveBinarySearch(authors, authors.length, "Jorge Luis Borges") === null;
+  recursiveBinarySearch(authors, "Aldous Huxley") === 0 &&
+  recursiveBinarySearch(authors, "Isaac Asimov") === 3 &&
+  recursiveBinarySearch(authors, "Terry Pratchett") === 7 &&
+  recursiveBinarySearch(authors, "Jorge Luis Borges") === null;
 console.log("recursiveBinarySearch: TESTS " + (tests ? "PASSED" : "FAILED"));
