@@ -1,8 +1,8 @@
 // RECURSIVE-LINEAR-SEARCH
-const recursiveLinearSearch = (A, n, x, i = 0) => {
+const recursiveLinearSearch = (A, x, i = 0, n = authors.length) => {
   if (i > n) return null;
   if (A[i] === x) return i;
-  return recursiveLinearSearch(A, n, x, ++i);
+  return recursiveLinearSearch(A, x, ++i, n);
 };
 
 // TESTS
@@ -17,7 +17,7 @@ const authors = [
   "Octavio Paz"
 ];
 const tests =
-  recursiveLinearSearch(authors, authors.length, "Isaac Asimov") === 0 &&
-  recursiveLinearSearch(authors, authors.length, "Terry Pratchett") === 4 &&
-  recursiveLinearSearch(authors, authors.length, "Jorge Luis Borges") === null;
+  recursiveLinearSearch(authors, "Isaac Asimov") === 0 &&
+  recursiveLinearSearch(authors, "Terry Pratchett") === 4 &&
+  recursiveLinearSearch(authors, "Jorge Luis Borges") === null;
 console.log("recursiveLinearSearch: TESTS " + (tests ? "PASSED" : "FAILED"));
