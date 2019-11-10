@@ -1,5 +1,5 @@
 // SELECTION-SORT
-const selectionSort = (A, n) => {
+const selectionSort = (A, n = authors.length) => {
   for (let i = 0; i < n - 1; i++) {
     let smallest = i;
     for (let j = i + 1; j < n; j++) {
@@ -36,8 +36,6 @@ const sortedAuthors = [
 const numbers = [9, 20, 1, 5, 7, 32, -4, 15];
 const sortedNumbers = [-4, 1, 5, 7, 9, 15, 20, 32];
 const tests =
-  JSON.stringify(selectionSort(authors, authors.length)) ===
-    JSON.stringify(sortedAuthors) &&
-  JSON.stringify(selectionSort(numbers, numbers.length)) ===
-    JSON.stringify(sortedNumbers);
+  JSON.stringify(selectionSort(authors)) === JSON.stringify(sortedAuthors) &&
+  JSON.stringify(selectionSort(numbers)) === JSON.stringify(sortedNumbers);
 console.log("selectionSort: TESTS " + (tests ? "PASSED" : "FAILED"));
