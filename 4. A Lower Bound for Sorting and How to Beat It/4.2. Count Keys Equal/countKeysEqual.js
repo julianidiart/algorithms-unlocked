@@ -14,3 +14,5 @@ const countNumbers = [5, 6];
 const tests =
   JSON.stringify(countKeysEqual(numbers)) === JSON.stringify(countNumbers);
 console.log("countKeysEqual: TESTS " + (tests ? "PASSED" : "FAILED"));
+
+module.exports = countKeysEqual;
