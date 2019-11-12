@@ -16,3 +16,5 @@ const lessNumbers = [0, 1, 4, 5, 6, 8, 8, 9, 9, 10];
 const tests =
   JSON.stringify(countKeysLess(countNumbers)) === JSON.stringify(lessNumbers);
 console.log("countKeysLess: TESTS " + (tests ? "PASSED" : "FAILED"));
+
+module.exports = countKeysLess;
