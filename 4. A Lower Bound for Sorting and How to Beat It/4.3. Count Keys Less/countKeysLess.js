@@ -1,8 +1,8 @@
 // COUNT-KEYS-LESS
-const countKeysLess = (equal, m = equal.length - 1) => {
-  let less = Array(m + 1);
+const countKeysLess = (equal, m = equal.length) => {
+  let less = Array(m);
   less[0] = 0;
-  for (let j = 1; j <= m; j++) {
+  for (let j = 1; j < m; j++) {
     less[j] = less[j - 1] + equal[j - 1];
   }
   return less;
