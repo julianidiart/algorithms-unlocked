@@ -1,5 +1,5 @@
 // BINARY-SEARCH
-const binarySearch = (A, x, n = authors.length) => {
+const binarySearch = (A, x, n = A.length) => {
   let p = 0;
   let r = n - 1;
   while (p <= r) {
