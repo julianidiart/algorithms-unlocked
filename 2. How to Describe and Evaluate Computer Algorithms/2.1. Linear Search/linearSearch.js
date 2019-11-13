@@ -1,5 +1,5 @@
 // LINEAR-SEARCH
-const linearSearch = (A, x, n = authors.length) => {
+const linearSearch = (A, x, n = A.length) => {
   let answer = null;
   for (let i = 0; i < n; i++) {
     if (A[i] === x) answer = i;
