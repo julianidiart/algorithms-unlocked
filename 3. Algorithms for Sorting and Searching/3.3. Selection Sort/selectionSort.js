@@ -1,5 +1,5 @@
 // SELECTION-SORT
-const selectionSort = (A, n = authors.length) => {
+const selectionSort = (A, n = A.length) => {
   for (let i = 0; i < n - 1; i++) {
     let smallest = i;
     for (let j = i + 1; j < n; j++) {
