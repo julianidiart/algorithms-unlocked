@@ -1,5 +1,5 @@
 // INSERTION-SORT
-const insertionSort = (A, n = authors.length) => {
+const insertionSort = (A, n = A.length) => {
   for (let i = 1; i < n; i++) {
     let key = A[i],
       j = i - 1;
