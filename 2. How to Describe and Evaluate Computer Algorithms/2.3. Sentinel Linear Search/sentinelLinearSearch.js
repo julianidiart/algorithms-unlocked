@@ -1,6 +1,7 @@
 // SENTINEL-LINEAR-SEARCH
-const sentinelLinearSearch = (A, x, n = A.length) => {
-  const last = A[n - 1];
+const sentinelLinearSearch = (A, x) => {
+  const n = A.length,
+    last = A[n - 1];
   A[n - 1] = x;
   let i = 0;
   while (A[i] !== x) i++;
