@@ -1,0 +1,24 @@
+{
+  "name": "algorithms-unlocked",
+  "version": "1.0.0",
+  "description": "Procedures' implementation from [Algorithms Unlocked](https://mitpress.mit.edu/books/algorithms-unlocked) by Thomas H. Cormen in JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianidiart/algorithms-unlocked.git"
+  },
+  "author": "Julián Idiart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianidiart/algorithms-unlocked/issues"
+  },
+  "homepage": "https://github.com/julianidiart/algorithms-unlocked#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "jest": "^24.9.0"
+  }
+}
