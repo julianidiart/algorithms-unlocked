@@ -1,5 +1,6 @@
 // BINARY-SEARCH
-const binarySearch = (A, x, n = A.length) => {
+const binarySearch = (A, x) => {
+  const n = A.length;
   let p = 0;
   let r = n - 1;
   while (p <= r) {
@@ -14,20 +15,4 @@ const binarySearch = (A, x, n = A.length) => {
   return null;
 };
 
-// TESTS
-const authors = [
-  "Aldous Huxley",
-  "Douglas Adams",
-  "George Orwell",
-  "Isaac Asimov",
-  "Julio Cortázar",
-  "Octavio Paz",
-  "Pablo Neruda",
-  "Terry Pratchett"
-];
-const tests =
-  binarySearch(authors, "Aldous Huxley") === 0 &&
-  binarySearch(authors, "Isaac Asimov") === 3 &&
-  binarySearch(authors, "Terry Pratchett") === 7 &&
-  binarySearch(authors, "Jorge Luis Borges") === null;
-console.log("binarySearch: TESTS " + (tests ? "PASSED" : "FAILED"));
+export default binarySearch;
