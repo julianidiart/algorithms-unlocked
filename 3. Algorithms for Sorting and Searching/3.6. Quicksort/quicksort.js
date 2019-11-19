@@ -1,5 +1,5 @@
 // PARTITION
-const partition = require("./partition");
+import partition from "./partition";
 
 // QUICKSORT
 const quicksort = (A, p = 0, r = A.length - 1) => {
@@ -10,30 +10,4 @@ const quicksort = (A, p = 0, r = A.length - 1) => {
   return A;
 };
 
-// TESTS
-const authors = [
-  "Octavio Paz",
-  "Douglas Adams",
-  "Isaac Asimov",
-  "George Orwell",
-  "Pablo Neruda",
-  "Aldous Huxley",
-  "Terry Pratchett",
-  "Julio Cortázar"
-];
-const sortedAuthors = [
-  "Aldous Huxley",
-  "Douglas Adams",
-  "George Orwell",
-  "Isaac Asimov",
-  "Julio Cortázar",
-  "Octavio Paz",
-  "Pablo Neruda",
-  "Terry Pratchett"
-];
-const numbers = [9, 20, 1, 5, 7, 32, -4, 15];
-const sortedNumbers = [-4, 1, 5, 7, 9, 15, 20, 32];
-const tests =
-  JSON.stringify(quicksort(authors)) === JSON.stringify(sortedAuthors) &&
-  JSON.stringify(quicksort(numbers)) === JSON.stringify(sortedNumbers);
-console.log("quicksort: TESTS " + (tests ? "PASSED" : "FAILED"));
+export default quicksort;
