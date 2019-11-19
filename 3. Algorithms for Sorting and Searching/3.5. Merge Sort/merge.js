@@ -18,4 +18,4 @@ const merge = (A, p, q, r) => {
   return A;
 };
 
-module.exports = merge;
+export default merge;
