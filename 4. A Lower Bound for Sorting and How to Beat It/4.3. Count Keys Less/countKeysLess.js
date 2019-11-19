@@ -8,13 +8,4 @@ const countKeysLess = (equal, m = equal.length) => {
   return less;
 };
 
-// TESTS
-const countKeysEqual = require("../4.2. Count Keys Equal/countKeysEqual");
-const numbers = [4, 1, 0, 1, 2, 4, 8, 6, 3, 9, 9, 1];
-const countNumbers = countKeysEqual(numbers);
-const lessNumbers = [0, 1, 4, 5, 6, 8, 8, 9, 9, 10];
-const tests =
-  JSON.stringify(countKeysLess(countNumbers)) === JSON.stringify(lessNumbers);
-console.log("countKeysLess: TESTS " + (tests ? "PASSED" : "FAILED"));
-
-module.exports = countKeysLess;
+export default countKeysLess;
