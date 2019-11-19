@@ -15,4 +15,4 @@ const partition = (A, p, r) => {
   return q;
 };
 
-module.exports = partition;
+export default partition;
