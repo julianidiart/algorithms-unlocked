@@ -1,5 +1,5 @@
 // MERGE
-const merge = require("./merge");
+import merge from "./merge";
 
 // MERGE-SORT
 const mergeSort = (A, p = 0, r = A.length - 1) => {
@@ -10,30 +10,4 @@ const mergeSort = (A, p = 0, r = A.length - 1) => {
   return merge(A, p, q, r);
 };
 
-// TESTS
-const authors = [
-  "Octavio Paz",
-  "Douglas Adams",
-  "Isaac Asimov",
-  "George Orwell",
-  "Pablo Neruda",
-  "Aldous Huxley",
-  "Terry Pratchett",
-  "Julio Cortázar"
-];
-const sortedAuthors = [
-  "Aldous Huxley",
-  "Douglas Adams",
-  "George Orwell",
-  "Isaac Asimov",
-  "Julio Cortázar",
-  "Octavio Paz",
-  "Pablo Neruda",
-  "Terry Pratchett"
-];
-const numbers = [9, 20, 1, 5, 7, 32, -4, 15];
-const sortedNumbers = [-4, 1, 5, 7, 9, 15, 20, 32];
-const tests =
-  JSON.stringify(mergeSort(authors)) === JSON.stringify(sortedAuthors) &&
-  JSON.stringify(mergeSort(numbers)) === JSON.stringify(sortedNumbers);
-console.log("mergeSort: TESTS " + (tests ? "PASSED" : "FAILED"));
+export default mergeSort;
