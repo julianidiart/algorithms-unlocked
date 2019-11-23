@@ -16,4 +16,5 @@ const dagShortestPaths = (G, s) => {
   }
   return { shortest, pred };
 };
+
 export default dagShortestPaths;
