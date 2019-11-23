@@ -5,5 +5,4 @@ const relax = (u, v, shortest, pred, weight) => {
     pred[v] = u;
   }
 };
-
 export default relax;

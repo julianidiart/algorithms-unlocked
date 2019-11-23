@@ -1,7 +1,7 @@
 import dagShortestPaths from "../dagShortestPaths";
 
 describe("dagShortestPaths", () => {
-  it("should return shortest path from vertex s to v and precending vertex v", () => {
+  it("should find shortest paths from vertex s to v and precending vertex v", () => {
     const G = {
       V: {
         1: [2, 3],
