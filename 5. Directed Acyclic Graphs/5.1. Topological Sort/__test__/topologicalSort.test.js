@@ -3,37 +3,37 @@ import topologicalSort from "../topologicalSort";
 describe("topologicalSort", () => {
   it("should sort a directed acyclic graph topologically", () => {
     const dagAdjacencyList = {
-      1: [3],
-      2: [4],
-      3: [4, 5],
-      4: [6],
-      5: [6],
-      6: [7, 11],
-      7: [8],
-      8: [13],
-      9: [10],
-      10: [11],
-      11: [12],
-      12: [13],
-      13: [14],
-      14: []
+      undershorts: ["compression shorts"],
+      socks: ["hose"],
+      "compression shorts": ["hose", "cup"],
+      hose: ["pants"],
+      cup: ["pants"],
+      pants: ["skates", "sweater"],
+      skates: ["leg pads"],
+      "leg pads": ["catch glove"],
+      "t-shirt": ["chest pad"],
+      "chest pad": ["sweater"],
+      sweater: ["mask"],
+      mask: ["catch glove"],
+      "catch glove": ["blocker"],
+      blocker: []
     };
 
     const dagTopologicallySorted = [
-      "9",
-      "10",
-      "2",
-      "1",
-      "3",
-      "5",
-      "4",
-      "6",
-      "11",
-      "12",
-      "7",
-      "8",
-      "13",
-      "14"
+      "t-shirt",
+      "chest pad",
+      "socks",
+      "undershorts",
+      "compression shorts",
+      "cup",
+      "hose",
+      "pants",
+      "sweater",
+      "mask",
+      "skates",
+      "leg pads",
+      "catch glove",
+      "blocker"
     ];
 
     expect(topologicalSort(dagAdjacencyList)).toEqual(dagTopologicallySorted);
