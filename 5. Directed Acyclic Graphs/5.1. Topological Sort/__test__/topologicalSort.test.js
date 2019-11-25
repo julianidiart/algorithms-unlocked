@@ -20,20 +20,20 @@ describe("topologicalSort", () => {
     };
 
     const dagTopologicallySorted = [
-      9,
-      10,
-      2,
-      1,
-      3,
-      5,
-      4,
-      6,
-      11,
-      12,
-      7,
-      8,
-      13,
-      14
+      "9",
+      "10",
+      "2",
+      "1",
+      "3",
+      "5",
+      "4",
+      "6",
+      "11",
+      "12",
+      "7",
+      "8",
+      "13",
+      "14"
     ];
 
     expect(topologicalSort(dagAdjacencyList)).toEqual(dagTopologicallySorted);

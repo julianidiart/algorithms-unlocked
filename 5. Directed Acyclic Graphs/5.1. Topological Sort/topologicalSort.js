@@ -1,22 +1,26 @@
 // TOPOLOGICAL-SORT
 const topologicalSort = G => {
-  let inDegree = new Array(Object.keys(G).length).fill(0);
-  for (const u in G) {
-    for (const v of G[u]) {
-      inDegree[v - 1]++;
+  const vertexKeys = Object.keys(G);
+  let inDegree = {};
+  for (let i = 0; i < vertexKeys.length; i++) {
+    inDegree[vertexKeys[i]] = 0;
+  }
+  for (const u in vertexKeys) {
+    for (const v of G[vertexKeys[u]]) {
+      inDegree[v]++;
     }
   }
   let next = [],
     linearOrder = [];
   for (const u in inDegree) {
-    if (inDegree[u] === 0) next.push(+u + 1);
+    if (inDegree[u] === 0) next.push(u);
   }
   while (next.length > 0) {
     const u = next.pop();
-    linearOrder.push(u);
+    linearOrder.push("" + u);
     for (const v of G[u]) {
-      inDegree[v - 1]--;
-      if (inDegree[v - 1] === 0) next.push(v);
+      inDegree[v]--;
+      if (inDegree[v] === 0) next.push(v);
     }
   }
   return linearOrder;
