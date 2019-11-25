@@ -4,56 +4,56 @@ describe("dagShortestPaths", () => {
   it("should find shortest paths from vertex s to v and precending vertex v", () => {
     const G = {
       V: {
-        1: [2, 3],
-        2: [3, 4],
-        3: [4, 5, 6],
-        4: [5, 6],
-        5: [6],
-        6: []
+        r: ["s", "t"],
+        s: ["t", "x"],
+        t: ["x", "y", "z"],
+        x: ["y", "z"],
+        y: ["z"],
+        z: []
       },
       E: {
-        1: {
-          2: 5,
-          3: 3
+        r: {
+          s: 5,
+          t: 3
         },
-        2: {
-          3: 2,
-          4: 6
+        s: {
+          t: 2,
+          x: 6
         },
-        3: {
-          4: 7,
-          5: 4,
-          6: 2
+        t: {
+          x: 7,
+          y: 4,
+          z: 2
         },
-        4: {
-          5: -1,
-          6: 1
+        x: {
+          y: -1,
+          z: 1
         },
-        5: {
-          6: -2
+        y: {
+          z: -2
         }
       }
     };
 
     const shortestPaths = {
       shortest: {
-        1: Number.POSITIVE_INFINITY,
-        2: 0,
-        3: 2,
-        4: 6,
-        5: 5,
-        6: 3
+        r: Number.POSITIVE_INFINITY,
+        s: 0,
+        t: 2,
+        x: 6,
+        y: 5,
+        z: 3
       },
       pred: {
-        1: null,
-        2: null,
-        3: 2,
-        4: 2,
-        5: 4,
-        6: 5
+        r: null,
+        s: null,
+        t: "s",
+        x: "s",
+        y: "x",
+        z: "y"
       }
     };
 
-    expect(dagShortestPaths(G, 2)).toEqual(shortestPaths);
+    expect(dagShortestPaths(G, "s")).toEqual(shortestPaths);
   });
 });
