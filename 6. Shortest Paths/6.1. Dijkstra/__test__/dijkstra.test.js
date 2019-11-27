@@ -4,32 +4,32 @@ describe("dijkstra", () => {
   it("should find shortest paths from vertex s to v and precending vertex v", () => {
     const G = {
       V: {
-        s: ["y", "t"],
-        t: ["y", "x"],
+        s: ["t", "y"],
+        t: ["x", "y"],
         x: ["z"],
-        y: ["z", "x", "t"],
-        z: ["x", "s"]
+        y: ["t", "x", "z"],
+        z: ["s", "x"]
       },
       E: {
         s: {
-          y: 4,
-          t: 6
+          t: 6,
+          y: 4
         },
         t: {
-          y: 2,
-          x: 3
+          x: 3,
+          y: 2
         },
         x: {
           z: 4
         },
         y: {
-          z: 3,
+          t: 1,
           x: 9,
-          t: 1
+          z: 3
         },
         z: {
-          x: 5,
-          s: 7
+          s: 7,
+          x: 5
         }
       }
     };
