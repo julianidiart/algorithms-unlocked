@@ -1,7 +1,7 @@
 import computeLCSTable from "../computeLCSTable";
 import assembleLCS from "../assembleLCS";
 
-describe("computeLCSTable", () => {
+describe("assembleLCS", () => {
   it("should return the two-dimensional array with the LCS table", () => {
     const X = "CATCGA",
       Y = "GTACCGTCA",
